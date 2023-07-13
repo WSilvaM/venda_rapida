@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:venda_rapida/Comtainer.dart';
 
 void main() {
   runApp(const MyApp());
@@ -39,7 +40,24 @@ class _MyHomePageState extends State<MyHomePage> {
         
         title: Text(widget.title),
       ),
-      body: Column()
+      body: Column(mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Row(mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              buildContainer( ),
+              buildContainer(),
+            ],
+          ),
+           Row(mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          buildContainer( ),
+          buildContainer(),
+        ],
+      )
+     ],
+    )
+      
+
      
     );
   }
