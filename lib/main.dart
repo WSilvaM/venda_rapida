@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/scheduler.dart';
 import 'package:venda_rapida/Comtainer.dart';
 
 void main() {
   runApp(const MyApp());
+  
 }
 
 class MyApp extends StatelessWidget {
@@ -53,7 +55,18 @@ class _MyHomePageState extends State<MyHomePage> {
           buildContainer( ),
           buildContainer(),
         ],
-      )
+        
+      ),
+       Padding(
+         padding: const EdgeInsets.only(left: 30),
+         child: Row(mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            
+            buildContainer(),
+          ],
+          
+             ),
+       )
      ],
     )
       
