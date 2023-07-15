@@ -18,7 +18,7 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
        
-        primarySwatch: Colors.pink
+        primarySwatch:Colors.pink ,
       ),
       home: const MyHomePage(title: 'Venda Rapida'),
     );
@@ -39,9 +39,9 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     
     return Scaffold(
-      appBar: AppBar(
+      appBar: AppBar(backgroundColor: ColorsApp.primary,
         
-        title: Center(child: Text(widget.title)),
+        title: Center(child: Text(widget.title,)),
       ),
       body:
       
@@ -77,16 +77,19 @@ class _MyHomePageState extends State<MyHomePage> {
               children: [
                 Containerbuild(IconButton(
                   onPressed: null, icon: Icon
-                  (Icons.shopping_basket_outlined, color: ColorsApp.primary,size: 50,)),),
-                Containerbuild(IconButton(onPressed: null, icon: Icon(Icons.now_widgets_outlined,color: ColorsApp.primary,size: 50,))),
+                  (Icons.shopping_basket_outlined, 
+                  color: ColorsApp.primary,size: 50,)),"caixa"),
+                Containerbuild(IconButton(onPressed: null,
+                 icon: Icon(Icons.now_widgets_outlined,color: ColorsApp.primary,size: 50,)),"Produtos"),
               ],
             ),
              Row(mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Containerbuild(IconButton(onPressed: null, icon: Icon(Icons.group_outlined,
             color: ColorsApp.primary,size: 50,
-            ),),),
-            Containerbuild(IconButton(onPressed: null, icon: Icon(Icons.moped_outlined,color: ColorsApp.primary,size: 50,))),
+            ),),"clientes"),
+            Containerbuild(IconButton(onPressed: null, icon: Icon
+            (Icons.moped_outlined,color: ColorsApp.primary,size: 50,)),"Delivery"),
           ],
           
         ),
@@ -95,7 +98,9 @@ class _MyHomePageState extends State<MyHomePage> {
            child: Row(mainAxisAlignment: MainAxisAlignment.start,
             children: [
               
-              Containerbuild(IconButton(onPressed: null, icon: Icon(Icons.insert_chart_outlined_outlined,color: ColorsApp.primary,size: 50,))),
+              Containerbuild(IconButton(onPressed: null, 
+              icon: Icon(Icons.insert_chart_outlined_outlined,color:
+               ColorsApp.primary,size: 50,)),"Relatórios"),
             ],
             
                ),
