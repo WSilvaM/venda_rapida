@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
+
 import 'package:venda_rapida/Comtainer.dart';
+import 'package:venda_rapida/styleCores/Cores.dart';
 
 void main() {
   runApp(const MyApp());
@@ -17,9 +18,9 @@ class MyApp extends StatelessWidget {
       title: 'Flutter Demo',
       theme: ThemeData(
        
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.pink
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: const MyHomePage(title: 'Venda Rapida'),
     );
   }
 }
@@ -40,35 +41,69 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         
-        title: Text(widget.title),
+        title: Center(child: Text(widget.title)),
       ),
-      body: Column(mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Row(mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              buildContainer( ),
-              buildContainer(),
-            ],
-          ),
-           Row(mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          buildContainer( ),
-          buildContainer(),
-        ],
+      body:
+      
+      
+       ListView(children: [
+        Padding(
+          padding: const EdgeInsets.all(25),
+          child: Container(width: 80,
+          height: 200, decoration: BoxDecoration(
+          color: Colors.white,
+            borderRadius: BorderRadius.circular(20),
+            boxShadow: [
+              BoxShadow(
+                color: Colors.grey.shade500,
+                offset: Offset(4.0,4.0),
+                blurRadius: 15.0,
+                spreadRadius: 1.0,
+              ),
+              BoxShadow(
+                color: Colors.white,
+                offset: Offset(-4.0,-4.0),
+                blurRadius: 15.0,
+                spreadRadius: 1.0,
+              )
+            ]
         
-      ),
-       Padding(
-         padding: const EdgeInsets.only(left: 30),
-         child: Row(mainAxisAlignment: MainAxisAlignment.start,
+            ),
+           ),
+        ),
+         Column(mainAxisAlignment: MainAxisAlignment.center,
           children: [
-            
-            buildContainer(),
+            Row(mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Containerbuild(IconButton(
+                  onPressed: null, icon: Icon
+                  (Icons.shopping_basket_outlined, color: ColorsApp.primary,size: 50,)),),
+                Containerbuild(IconButton(onPressed: null, icon: Icon(Icons.now_widgets_outlined,color: ColorsApp.primary,size: 50,))),
+              ],
+            ),
+             Row(mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Containerbuild(IconButton(onPressed: null, icon: Icon(Icons.group_outlined,
+            color: ColorsApp.primary,size: 50,
+            ),),),
+            Containerbuild(IconButton(onPressed: null, icon: Icon(Icons.moped_outlined,color: ColorsApp.primary,size: 50,))),
           ],
           
-             ),
-       )
-     ],
-    )
+        ),
+         Padding(
+           padding: const EdgeInsets.only(left: 30),
+           child: Row(mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+              
+              Containerbuild(IconButton(onPressed: null, icon: Icon(Icons.insert_chart_outlined_outlined,color: ColorsApp.primary,size: 50,))),
+            ],
+            
+               ),
+         )
+           ],
+          ),
+          ],
+      )
       
 
      

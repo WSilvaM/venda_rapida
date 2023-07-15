@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:venda_rapida/styleCores/Cores.dart';
 
-Widget buildContainer(){
+Widget Containerbuild(IconButton iconButton,){
   return Padding(
     padding: const EdgeInsets.all(8.0),
     child: Container(
-      width: 150, 
+      child:iconButton,
+       width: 150, 
        height: 150,
        decoration: BoxDecoration(
         color: Colors.white,
@@ -22,9 +24,11 @@ Widget buildContainer(){
               blurRadius: 15.0,
               spreadRadius: 1.0,
             )
+
           ]
 
           ),
+          
           ),
   );
 }

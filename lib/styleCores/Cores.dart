@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 class ColorsApp {
-  static const Color primary = Color(0xFFFFBB00);
+  static const Color primary = Colors.pink;
 
   static const Color black = Color(0xff000000);
 
