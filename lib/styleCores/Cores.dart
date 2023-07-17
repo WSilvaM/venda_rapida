@@ -3,9 +3,11 @@ import 'package:flutter/material.dart';
 class ColorsApp {
   static const Color primary = Color.fromARGB(255, 211, 6, 143);
 
-  static const Color black = Color(0xff000000);
+  ColorsApp(Color black);
 
-  static const Color blue = Color(0xff4973FF);
+  static Color get grey => Colors.grey.shade500;
+
+  static const Color black = Color.fromARGB(255, 0, 0, 0);
 
   static const Color green = Color(0xff1CB86D);
 
