@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'package:venda_rapida/Comtainer.dart';
-import 'package:venda_rapida/Telas/Tela_Produtos.dart';
+import 'package:venda_rapida/Widgets.dart';
+import 'package:venda_rapida/Produtos/Tela_Produtos.dart';
 import 'package:venda_rapida/styleCores/Cores.dart';
 
 void main() {
@@ -36,13 +36,14 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        actions: [
+        actions: const [
           IconButton(
-              onPressed: null,
-              icon: Icon(
-                Icons.settings,
-                color: Colors.white,
-              ))
+            onPressed: null,
+            icon: Icon(
+              Icons.settings,
+              color: Colors.white,
+            ),
+          ),
         ],
         backgroundColor: ColorsApp.primary,
         title: Center(
@@ -179,7 +180,8 @@ class _MyHomePageState extends State<MyHomePage> {
                               Icons.insert_chart_outlined_outlined,
                               color: ColorsApp.primary,
                               size: 50,
-                            )),
+                            ),
+                        ),
                         "Relatórios"),
                   ],
                 ),

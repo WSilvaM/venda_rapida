@@ -35,22 +35,23 @@ Widget Containerbuild(IconButton iconButton, String texto) {
           width: 150,
           height: 150,
           decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.circular(12),
-              boxShadow: [
-                BoxShadow(
-                  color: ColorsApp.grey,
-                  offset: Offset(4.0, 4.0),
-                  blurRadius: 15.0,
-                  spreadRadius: 1.0,
-                ),
-                BoxShadow(
-                  color: Colors.white,
-                  offset: Offset(-4.0, -4.0),
-                  blurRadius: 15.0,
-                  spreadRadius: 1.0,
-                ),
-              ]),
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(12),
+            boxShadow: [
+              BoxShadow(
+                color: ColorsApp.grey,
+                offset: Offset(4.0, 4.0),
+                blurRadius: 15.0,
+                spreadRadius: 1.0,
+              ),
+              const BoxShadow(
+                color: Colors.white,
+                offset: Offset(-4.0, -4.0),
+                blurRadius: 15.0,
+                spreadRadius: 1.0,
+              ),
+            ],
+          ),
         ),
       ],
     ),
