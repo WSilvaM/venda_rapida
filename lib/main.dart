@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'package:venda_rapida/Caixa/Tela_caixa.dart';
+
 import 'package:venda_rapida/Widgets.dart';
 import 'package:venda_rapida/Produtos/Tela_Produtos.dart';
 import 'package:venda_rapida/styleCores/Cores.dart';
@@ -15,9 +17,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        primarySwatch: Colors.pink,
-      ),
+      theme: ThemeData(primarySwatch: Colors.pink),
       home: const MyHomePage(title: 'Venda Rapida'),
     );
   }
@@ -46,7 +46,8 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
         ],
         backgroundColor: ColorsApp.primary,
-        title: Center(
+        title: Padding(
+          padding: const EdgeInsets.only(left: 128),
           child: Text(
             widget.title,
           ),
@@ -59,7 +60,7 @@ class _MyHomePageState extends State<MyHomePage> {
             child: Container(
               child: Column(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 8,
                   ),
                   Text(
@@ -67,15 +68,15 @@ class _MyHomePageState extends State<MyHomePage> {
                     style: TextStyle(fontSize: 25, fontWeight: FontWeight.w800),
                   ),
                   Padding(
-                    padding: const EdgeInsets.all(8.0),
+                    padding: EdgeInsets.all(8.0),
                     child: Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        buildCont("Hoje", ColorsApp.primary, 30, 60),
-                        buildCont("7D", ColorsApp.grey, 30, 40),
-                        buildCont("1M", ColorsApp.grey, 30, 40),
-                        buildCont("6M", ColorsApp.grey, 30, 40),
-                        buildCont("1A", ColorsApp.grey, 30, 40),
+                        buildCont("Hoje", ColorsApp.primary, 30, 60,ColorsApp.white),
+                        buildCont("7D", ColorsApp.grey, 30, 40,ColorsApp.white),
+                        buildCont("1M", ColorsApp.grey, 30, 40,ColorsApp.white),
+                        buildCont("6M", ColorsApp.grey, 30, 40,ColorsApp.white),
+                        buildCont("1A", ColorsApp.grey, 30, 40,ColorsApp.white),
                       ],
                     ),
                   ),
@@ -83,7 +84,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   SizedBox(
                     height: 10,
                   ),
-                  buildContai("vendas realizadas", 12)
+                  buildContai("1 venda realizada", 12)
                 ],
               ),
               width: 80,
@@ -115,8 +116,15 @@ class _MyHomePageState extends State<MyHomePage> {
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [
                   Containerbuild(
-                      const IconButton(
-                        onPressed: null,
+                      IconButton(
+                        onPressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Tela_Caixa(),
+                            ),
+                          );
+                        },
                         icon: Icon(
                           Icons.shopping_basket_outlined,
                           color: ColorsApp.primary,
@@ -128,12 +136,14 @@ class _MyHomePageState extends State<MyHomePage> {
                       IconButton(
                         onPressed: () {
                           Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => Produtos(),
-                              ));
-                          //  Navigator.of(context).pushReplacement(MaterialPageRoute(builder: (context) => Produtos(),));
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Produtos(),
+                            ),
+                          );
                         },
+                        //  Navigator.of(context).pushReplacement
+                        //(MaterialPageRoute(builder: (context) => Produtos(),));
                         icon: const Icon(
                           Icons.now_widgets_outlined,
                           color: ColorsApp.primary,
@@ -175,12 +185,12 @@ class _MyHomePageState extends State<MyHomePage> {
                   children: [
                     Containerbuild(
                         const IconButton(
-                            onPressed: null,
-                            icon: Icon(
-                              Icons.insert_chart_outlined_outlined,
-                              color: ColorsApp.primary,
-                              size: 50,
-                            ),
+                          onPressed: null,
+                          icon: Icon(
+                            Icons.insert_chart_outlined_outlined,
+                            color: ColorsApp.primary,
+                            size: 50,
+                          ),
                         ),
                         "Relatórios"),
                   ],

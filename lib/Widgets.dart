@@ -23,7 +23,7 @@ Widget Containerbuild(IconButton iconButton, String texto) {
                     child: Text(
                       texto,
                       style: TextStyle(
-                          color: ColorsApp.black,
+                          color: ColorsApp.Black,
                           fontWeight: FontWeight.w500,
                           fontSize: 15),
                     ),
@@ -58,14 +58,14 @@ Widget Containerbuild(IconButton iconButton, String texto) {
   );
 }
 
-Widget buildCont(String texto, Color ColorsApp, double Height, double Width) {
+Widget buildCont(String texto, Color ColorsApp, double Height, double Width, col) {
   return Row(
     children: [
       Container(
         alignment: Alignment.center,
         child: Text(
           texto,
-          style: TextStyle(color: Colors.white, fontWeight: FontWeight.w600),
+          style: TextStyle(color:col, fontWeight: FontWeight.w400),
         ),
         height: Height,
         width: Width,

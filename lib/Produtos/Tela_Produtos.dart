@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:venda_rapida/Produtos/ProdutosRepositories.dart';
+import 'package:venda_rapida/StyleCores/Cores.dart';
 import 'package:venda_rapida/Widgets.dart';
 
 class Produtos extends StatefulWidget {
@@ -15,20 +16,40 @@ class _ProdutosState extends State<Produtos> {
     final tabela = ProdutosRepository.tabela;
     return Scaffold(
       appBar: AppBar(
-        title: Center(child: Text("Produtos",)),
-       
+        backgroundColor: ColorsApp.primary,
+        actions: const [
+          IconButton(
+            onPressed: null,
+            icon: Icon(
+              Icons.search,
+              color: Colors.white,
+            ),
+          ),
+        ],
+        title: Center(
+            child: Text(
+          "Produtos",
+        )),
       ),
       body: ListView.separated(
-          itemBuilder: (BuildContext context, int Produtos){
+          itemBuilder: (BuildContext context, int Produtos) {
             return ListTile(
               leading: Image.asset(tabela[Produtos].icone),
               title: Text(tabela[Produtos].nome),
-              trailing: Text(tabela[Produtos].preco.toString(),),
+              trailing: Text(
+                tabela[Produtos].preco.toString(),
+              ),
             );
           },
           padding: EdgeInsets.all(16),
           separatorBuilder: (_, __) => const Divider(),
           itemCount: tabela.length),
+      floatingActionButton: FloatingActionButton(
+          onPressed: null,
+          child: Icon(
+            Icons.add,
+          ),
+          backgroundColor: ColorsApp.primary),
     );
   }
 }
