@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
-
 import 'package:venda_rapida/Caixa/Tela_caixa.dart';
-
 import 'package:venda_rapida/Widgets.dart';
 import 'package:venda_rapida/Produtos/Tela_Produtos.dart';
 import 'package:venda_rapida/styleCores/Cores.dart';
@@ -58,9 +56,9 @@ class _MyHomePageState extends State<MyHomePage> {
           Padding(
             padding: const EdgeInsets.all(25),
             child: Container(
-              child: Column(
+            child: Column(
                 children: [
-                  const SizedBox(
+                   SizedBox(
                     height: 8,
                   ),
                   Text(
@@ -80,11 +78,11 @@ class _MyHomePageState extends State<MyHomePage> {
                       ],
                     ),
                   ),
-                  buildContai("R\$ 182,00", 40),
+                  buildContai("R\$ 000,00", 40),
                   SizedBox(
                     height: 10,
                   ),
-                  buildContai("1 venda realizada", 12)
+                  buildContai("0 venda realizada", 12)
                 ],
               ),
               width: 80,
