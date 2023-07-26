@@ -125,3 +125,45 @@ Widget buildElevatedButton(String nome) {
     ),
   );
 }
+
+Widget buildClientes(String nome,String numero) {
+  return Container(
+    child: Row(
+      children: [
+        Column(
+          children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 10,right: 55),
+            child: Text(nome ,),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 10,right: 55),
+            child: Text(numero, style: TextStyle(color: ColorsApp.grey),),
+          ),
+        
+        ],),
+      ],
+    ),
+  );
+}
+
+Widget buildClient(String data,String dados) {
+  return Container(
+    child: Row(
+      children: [
+        Column(
+          children: [
+          Padding(
+            padding: const EdgeInsets.only(left: 1,right: 155, bottom: 7),
+            child: Text(data ,style: TextStyle(color: ColorsApp.grey),),
+          ),
+          Padding(
+            padding: const EdgeInsets.only(left: 10,right: 55),
+            child: Text(dados, ),
+          ),
+        
+        ],),
+      ],
+    ),
+  );
+}

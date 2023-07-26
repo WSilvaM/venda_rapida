@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:venda_rapida/Caixa/Tela_caixa.dart';
+import 'package:venda_rapida/Clientes/TelaClientes.dart';
+import 'package:venda_rapida/Delivery/TelaDelivery.dart';
 import 'package:venda_rapida/Widgets.dart';
 import 'package:venda_rapida/Produtos/Tela_Produtos.dart';
 import 'package:venda_rapida/styleCores/Cores.dart';
@@ -156,7 +158,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 children: [
                   Containerbuild(
                       IconButton(
-                        onPressed: () {},
+                        onPressed: (){
+                             Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Tela_clientes(),
+                            ),);
+                        },
                         icon: const Icon(
                           Icons.group_outlined,
                           color: ColorsApp.primary,
@@ -165,8 +173,14 @@ class _MyHomePageState extends State<MyHomePage> {
                       ),
                       "clientes"),
                   Containerbuild(
-                      const IconButton(
-                        onPressed: null,
+                       IconButton(
+                        onPressed: (){
+                             Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) => Tela_Delivery(),
+                            ),);
+                        },
                         icon: Icon(
                           Icons.moped_outlined,
                           color: ColorsApp.primary,

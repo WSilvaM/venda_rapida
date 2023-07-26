@@ -45,7 +45,7 @@ class _ProdutosState extends State<Produtos> {
           separatorBuilder: (_, __) => const Divider(),
           itemCount: tabela.length),
       floatingActionButton: FloatingActionButton(
-          onPressed: null,
+          onPressed: (){},
           child: Icon(
             Icons.add,
           ),
